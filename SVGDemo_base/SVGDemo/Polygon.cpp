@@ -1,23 +1,39 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
-void Polygon::parseAttributes(xml_node<>* node) {
-    for (xml_attribute<>* attr = node->first_attribute(); attr; attr = attr->next_attribute()) {
-        string name = attr->name();
-        string value = attr->value();
-        if (name == "points") {
-            stringstream ss(value);
-            string token;
-            while (getline(ss, token, ' ')) {
-                if (token.empty()) continue;
-                size_t commaPos = token.find(',');
-                if (commaPos == string::npos) continue;
-                float x = stof(token.substr(0, commaPos));
-                float y = stof(token.substr(0, commaPos + 1));
-                points.push_back(PointF(x, y));
-            }
+void Polygon::parsePoints(const std::string& pointStr) {
+    // Tái sử dụng logic parse points
+    std::stringstream ss(pointStr);
+    double value;
+    int count = 0;
+    Point currentPoint;
+
+    while (ss >> value) {
+        if (count % 2 == 0) {
+            currentPoint.x = value;
         }
         else {
-            parse(name, value);
+            currentPoint.y = value;
+            points.push_back(currentPoint);
         }
+        count++;
     }
+}
+
+Polygon::Polygon(const std::string& pointStr,
+    const std::string& stroke, double width, const std::string& fill)
+    // Polygon thường có fill mặc định (khác với Line/Polyline)
+    : SVGElement(stroke, width, fill) {
+    parsePoints(pointStr);
+}
+
+void Polygon::render() const {
+    std::cout << "Rendering Polygon (Element: <polygon>):" << std::endl;
+    std::cout << "  Points: ";
+    for (const auto& p : points) {
+        std::cout << "(" << p.x << ", " << p.y << ") ";
+    }
+    // Ghi chú việc hình dạng được đóng kín (kết nối điểm cuối với điểm đầu)
+    std::cout << " (Closed)" << std::endl;
+    std::cout << "  Stroke: " << stroke << ", Fill: " << fill << ", Width: " << strokeWidth << std::endl;
+    // ... Thêm code gọi thư viện đồ họa thực tế tại đây ...
 }
