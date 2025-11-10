@@ -8,5 +8,6 @@ public:
     float radius;
     void parseAttributes(xml_node<>* node) override;
     void print();
+    void hello();
 };
 #endif
