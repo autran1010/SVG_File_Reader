@@ -1,0 +1,19 @@
+﻿  stdafx.cpp
+  Circle.cpp
+  Element.cpp
+  Ellipse.cpp
+  Line.cpp
+  Parser.cpp
+  Point2D.cpp
+  Polygon.cpp
+  Polyline.cpp
+  Rectangle.cpp
+  SVGDemo.cpp
+  Stroke.cpp
+  Text.cpp
+D:\SVGDemo\SVGDemo\SVGDemo.cpp(93,14): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
+  (compiling source file '/SVGDemo.cpp')
+  
+  Generating Code...
+D:\SVGDemo\SVGDemo\Parser.cpp(14,1): warning C4715: 'Parser::createElement': not all control paths return a value
+  SVGDemo.vcxproj -> D:\SVGDemo\x64\Debug\SVGDemo.exe
