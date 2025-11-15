@@ -1,0 +1,16 @@
+﻿  Parser.cpp
+  Polygon.cpp
+D:\SVGDemo_base\SVGDemo\Parser.cpp(15,41): error C2061: syntax error: identifier 'Rectangle'
+  (compiling source file '/Parser.cpp')
+  
+D:\SVGDemo_base\SVGDemo\Parser.cpp(16,44): error C2061: syntax error: identifier 'Ellipse'
+  (compiling source file '/Parser.cpp')
+  
+D:\SVGDemo_base\SVGDemo\Parser.cpp(18,45): error C2061: syntax error: identifier 'Polyline'
+  (compiling source file '/Parser.cpp')
+  
+D:\SVGDemo_base\SVGDemo\Parser.cpp(19,44): error C2061: syntax error: identifier 'Polygon'
+  (compiling source file '/Parser.cpp')
+  
+  Text.cpp
+  Generating Code...
