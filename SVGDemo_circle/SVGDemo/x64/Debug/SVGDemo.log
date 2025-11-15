@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  Circle.cpp
+  SVGDemo.cpp
+D:\SVGDemo\SVGDemo\SVGDemo.cpp(131,14): warning C4244: 'return': conversion from 'WPARAM' to 'int', possible loss of data
+  (compiling source file '/SVGDemo.cpp')
+  
+  Generating Code...
+  SVGDemo.vcxproj -> D:\SVGDemo\x64\Debug\SVGDemo.exe
