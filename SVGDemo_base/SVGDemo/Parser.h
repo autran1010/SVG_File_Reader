@@ -1,4 +1,3 @@
-#include "Element.h"
 #include "Circle.h"
 #include "Rectangle.h"
 #include "Ellipse.h"
@@ -6,6 +5,10 @@
 #include "Polyline.h"
 #include "Line.h"
 #include "Text.h"
+#include "Element.h"
+
+using namespace std;
+using namespace rapidxml;
 
 #ifndef PARSER_H_
 #define	PARSER_H_

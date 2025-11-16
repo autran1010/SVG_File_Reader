@@ -5,9 +5,10 @@
 
 class Circle : public Element {
 public:
-    Circle();
     Point center;
     float radius;
-    void parseAttributes(xml_node<>* node) override;
+    Circle() : center(0, 0), radius(0) {}
+    ~Circle() override = default;
+    void parseAttributes(xml_node<>*) override;
 };
 #endif

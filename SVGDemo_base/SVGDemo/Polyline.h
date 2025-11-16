@@ -6,7 +6,7 @@
 class Polyline : public Element {
 public:
 	vector<Point> points;
-	void parseAttributes(xml_node<>* node) override;
+	void parseAttributes(xml_node<>*) override;
 };
 
 #endif

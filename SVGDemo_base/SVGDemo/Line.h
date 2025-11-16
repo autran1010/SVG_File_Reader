@@ -6,7 +6,9 @@
 class Line : public Element {
 public:
 	Point point1, point2;
-	void parseAttributes(xml_node<>* node) override;
+	Line() : point1(0, 0), point2(0,0) {}
+	~Line() override = default;
+	void parseAttributes(xml_node<>*) override;
 };
 
 #endif

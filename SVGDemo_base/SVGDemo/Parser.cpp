@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Parser.h"
 
 Parser::Parser() {
@@ -12,14 +11,12 @@ Parser::~Parser() {
 
 Element* Parser::createElement(const string& name) {
     if (name == "circle") return new Circle();
-    // else if (name == "rect") return new Rectangle();
-    // if (name == "ellipse") return new Ellipse();
-    /*
+    else if (name == "rect") return new Rectangle();
+    if (name == "ellipse") return new Ellipse();
     else if (name == "line") return new Line();
     else if (name == "polyline") return new Polyline();
     else if (name == "polygon") return new Polygon();
     else if (name == "text") return new Text();
-    */
     else return nullptr;
 }
 

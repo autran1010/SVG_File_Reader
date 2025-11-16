@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include <iostream>
 #ifndef STROKE_H_
 #define	STROKE_H_
 

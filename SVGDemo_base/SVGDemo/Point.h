@@ -1,4 +1,5 @@
-#include "stdafx.h"
+#include <iostream>
+
 #ifndef POINT_H_
 #define	POINT_H_
 

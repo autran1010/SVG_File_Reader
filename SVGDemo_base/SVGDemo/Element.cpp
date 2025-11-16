@@ -1,6 +1,4 @@
-﻿#include "stdafx.h"
-
-#include "Element.h"
+﻿#include "Element.h"
 
 /*
 Color Element::apply(string value) {

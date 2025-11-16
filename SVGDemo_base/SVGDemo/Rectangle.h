@@ -5,10 +5,12 @@
 
 class Rectangle: public Element {
 public:
-	Point point;
 	float width;
 	float height;
-	void parseAttributes(xml_node<>* node) override;
+	Point point;
+	Rectangle() : width(0), height(0), point(0,0) {}
+	~Rectangle() override = default;
+	void parseAttributes(xml_node<>*) override;
 };
 
 #endif
