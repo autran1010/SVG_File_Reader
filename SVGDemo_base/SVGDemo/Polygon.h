@@ -1,12 +1,16 @@
+#include "Point.h"
 #include "Element.h"
-
 #ifndef POLYGON_H_
 #define POLYGON_H_
 
-class Polygon : public Element {
+class polygon : public Element {
+private:
+	vector<point> points;
 public:
-	vector<Point> points;
+	polygon() = default;
+	~polygon() override = default;
 	void parseAttributes(xml_node<>*) override;
+	void Draw(Gdiplus::Graphics* graphics) override;
 };
 
 #endif
