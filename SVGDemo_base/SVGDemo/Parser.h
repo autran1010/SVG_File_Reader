@@ -1,22 +1,21 @@
+#include "Element.h"
 #include "Circle.h"
 #include "Rectangle.h"
 #include "Ellipse.h"
-#include "Polygon.h"
-#include "Polyline.h"
 #include "Line.h"
+#include "Polyline.h"
+#include "Polygon.h"
 #include "Text.h"
-#include "Element.h"
 
-using namespace std;
-using namespace rapidxml;
 
 #ifndef PARSER_H_
 #define	PARSER_H_
 
 class Parser {
-public:
+private:
 	string source;
 	vector<Element*>children;
+public:
 	Parser();
 	~Parser();
 	Element* createElement(const string&);
