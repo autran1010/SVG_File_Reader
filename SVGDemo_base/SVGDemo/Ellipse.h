@@ -1,16 +1,20 @@
+#include "Point.h"
 #include "Element.h"
 
 #ifndef ELLIPSE_H_
 #define ELLIPSE_H_
 
-class Ellipse : public Element {
-public:
-	Point center;
+class ellipse : public Element {
+private:
+	point center;
 	float rx, ry;
-	Ellipse() : center(0, 0), rx(0), ry(0) {}
-	~Ellipse() override = default;
+public:
+	
+	ellipse() : center(0, 0), rx(0), ry(0) {}
+	~ellipse() override = default;
 	void parseAttributes(xml_node<>*) override;
+	void Draw(Gdiplus::Graphics* graphics) override;
 };
 
-#endif // !ECLIPSE_H_
+#endif 
 
