@@ -1,14 +1,14 @@
 #include "Point.h"
 #include "Element.h"
-#ifndef POLYLINE_H_
-#define POLYLINE_H_
+#ifndef LINE_H_
+#define LINE_H_
 
-class polyline : public Element {
+class Line : public Element {
 private:
-	vector<point> points;
+	point point1, point2;
 public:
-	polyline() = default;
-	~polyline() override = default;
+	Line() : point1(0, 0), point2(0, 0) {}
+	~Line() override = default;
 	void parseAttributes(xml_node<>*) override;
 	void Draw(Gdiplus::Graphics* graphics) override;
 };
